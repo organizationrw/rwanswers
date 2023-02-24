@@ -1,29 +1,65 @@
-!<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Please Authenticate</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <script language="javascript">
-        function pasuser(form) { 
-        if (form.id.value=="rwans") { 
-        if (form.pass.value=="klaera221") { location="ajdfhwasnceasdf.html" } 
-        else { alert("Wrong Password") } 
-        } 
-        else { alert("Wrong Username") } 
-        } 
-        </script>
-        <form name="login">
-        Username: <input name="id" size="6" type="text">
+    <div style="width: 185px; margin: 0 auto;">
         <br>
-        <br>
-        Password: <input name="pass" size="6" type="password">
-        <br>
-        <br>
-        <input value="Authenticate" onclick="pasuser(this.form)" type="button">
+        <form id="loginForm">
+          <input type="password" id="password" name="password" placeholder="Access code">
+          <br>
+          <button type="button" onclick="login()">Continue</button>
         </form>
+        <div id="result"></div>
+    </div>
+
+
+  
+  <script>
+    function login() {
+  var password = document.getElementById("").value;
+
+  if (password === "o4xeg4") {
+    window.location.href = "ajdfhwasnceasdf.html";
+  } else {
+    document.getElementById("result").alert = alert("Incorrect access code, please try again.\nTo request the access code again, contact Discord user: koruieais212#5349\nOr send an email to: accesscodereq@null.net");
+  }
+}
+
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    login();
+  });
+  </script>
+
+<style>
+    input[type=password] {
+  padding:10px;
+  margin:10px 0;
+}
+
+button {
+
+/* remove default behavior */
+appearance:none;
+-webkit-appearance:none;
+
+/* usual styles */
+padding:10px;
+border:none;
+background-color:#3F51B5;
+color:#fff;
+font-weight:600;
+border-radius:5px;
+width:100%;
+
+}
+</style>
 </body>
+
 </html>
